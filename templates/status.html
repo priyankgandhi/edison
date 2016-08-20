@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block container %}
+
+      <div class="page-header">
+        <h1>Status for {{ filename }}</h1>
+        <p>Failures= {{failures}}</p>
+      </div>
+
+      <h3>Download Files</h3>
+      <div class="row">
+        <div class="col-md-12"><a href="/download/{{response['offersoutname']}}">{{response['offersoutname']}}</a></div>        
+      </div>
+      <div class="row">
+        <div class="col-md-12"><a href="/download/{{response['utf16exceloutname']}}">{{response['utf16exceloutname']}}</a></div> 
+      </div>
+      <hr>
+      <h3>Log Summary</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <pre>{{ summary }}</pre>
+        </div>
+      </div>
+      <h3>Log Details</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <pre>{{'\n'.join(response['log'])}}</pre>
+        </div>
+      </div>
+
+{% endblock %}
