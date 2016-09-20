@@ -68,4 +68,4 @@ def uploaded_file(filename):
 if __name__ == "__main__":
 	app.secret_key = 'super secret key is here'
 	app.config['SESSION_TYPE'] = '/tmp'
-	app.run(host="0.0.0.0", debug=True)
+	app.run(host="0.0.0.0", debug=True, port=80)
