@@ -3,12 +3,16 @@
 
       <div class="page-header">
         <h1>Status for {{ filename }}</h1>
-        <p>Failures= {{failures}}</p>
+        <p>Failures= {{failures}}</p>        
       </div>
 
       <h3>Download Files</h3>
+
       <div class="row">
-        <div class="col-md-12"><a href="/download/{{response['offersoutname']}}">{{response['offersoutname']}}</a></div>        
+        <div class="col-md-12"><b>Input:</b> <a href="/uploads/{{ filename }}">{{ filename }}</a></div>
+      </div> 
+      <div class="row">
+        <div class="col-md-12"><a href="/download/{{response['offersoutname']}}">{{response['offersoutname']}}</a></div>
       </div>
       <div class="row">
         <div class="col-md-12"><a href="/download/{{response['utf16exceloutname']}}">{{response['utf16exceloutname']}}</a></div> 

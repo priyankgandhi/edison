@@ -20,8 +20,7 @@ replacements = [['BMO Mastercard', 'card'], # en_CA
                 ['&nbsp;', chr(160)], # use non-breaking space character
                 [',PENDING,', ',APPROVED,']] # Scotiabank does not use FI Dashboard Offer Review
 
-verifications = [['BMO', 0], ['Mastercard', 0], ['<span', 0], ['span>', 0], ['nbsp', 0]]
-
+verifications = [[' BMO', 0], ['BMO ', 0], ['Mastercard', 0], ['<span', 0], ['span>', 0], ['nbsp', 0]]
 
 
 def convert(input_file, output_dir): 
